@@ -48,7 +48,7 @@ public class Test {
                 String type = sc.next();
                 if(type.equals("date"))
                 {
-                    Integer uid = sc.nextInt();
+                    String uid = sc.next();
                     System.out.println(uidm.secDate(uid));
                 }
                 else if(type.equals("code"))
@@ -58,7 +58,7 @@ public class Test {
                 }
                 else if(type.equals("seq"))
                 {
-                    Integer uid = sc.nextInt();
+                    String uid = sc.next();
                     System.out.println(uidm.secSeq(uid));
                 }
             }

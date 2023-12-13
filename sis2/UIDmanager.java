@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class UIDmanager {
-    private HashMap<Integer,Object> dateHM = new HashMap<Integer, Object>();
+    private HashMap<String,Object> dateHM = new HashMap<String, Object>();
     private HashMap<String,Object> codeHM = new HashMap<String, Object>();
-    private HashMap<Integer,Object> seqHM = new HashMap<Integer, Object>();
+    private HashMap<String,Object> seqHM = new HashMap<String, Object>();
 
     final Random rd = new Random();
 
@@ -20,10 +20,9 @@ public class UIDmanager {
 
     private char getRandChar()
     {
-        int flg = rd.nextInt(26+26+10);
+        int flg = rd.nextInt(26+10);
         if(flg < 10) return (char)(48+flg);
-        else if(flg < 10+26) return (char)(55+flg);
-        else return (char)(97-10-26+flg);
+        else return (char)(55+flg);
     }
 
     public UIDmanager()
@@ -40,13 +39,20 @@ public class UIDmanager {
         CODE_LENGTH = _CODE_LENGTH;
     }
 
-    public Integer nextDate(Object c)
+    public String nextDate(Object c)
     {
         Date date = new Date();
-        SimpleDateFormat sf = new SimpleDateFormat("yymmdd");
+        SimpleDateFormat sf = new SimpleDateFormat("yyMMdd");
         String s = sf.format(date);
         nextDataNum++;
-        Integer rt = (int) (Integer.parseInt(s) * (Double.valueOf(Math.pow(10, DATENUM_LENGTH))) + nextDataNum);
+        Integer tmp = nextDataNum;
+        StringBuffer sb = new StringBuffer();
+        for(int i = 0;i < DATENUM_LENGTH;i ++)
+        {
+            sb.append(tmp % 10);
+            tmp /= 10;
+        }
+        String rt = s + sb.reverse().toString();
         dateHM.put(rt, c);
         return rt;
     }
@@ -60,20 +66,27 @@ public class UIDmanager {
             {
                 rt.append(getRandChar());
             }
-            rt.append('-');
+            if(k != 3)rt.append('-');
         }
         codeHM.put(rt.toString(), c);
         return rt.toString();
     }
 
-    public Integer nextSeq(Object c)
+    public String nextSeq(Object c)
     {
-        nextSeq++;
-        seqHM.put(nextSeq, c);
-        return nextSeq;
+        StringBuffer rt = new StringBuffer();
+        nextSeq ++;
+        Integer tmp = nextSeq;
+        for(int i = 0;i < SEQ_LENGTH;i ++)
+        {
+            rt.append(tmp % 10);
+            tmp /= 10;
+        }
+        seqHM.put(rt.reverse().toString(), c);
+        return rt.toString();
     }
 
-    public Object secDate(Integer uid)
+    public Object secDate(String uid)
     {
         return dateHM.get(uid);
     }
@@ -83,7 +96,7 @@ public class UIDmanager {
         return codeHM.get(uid);
     }
 
-    public Object secSeq(Integer uid)
+    public Object secSeq(String uid)
     {
         return seqHM.get(uid);
     }
