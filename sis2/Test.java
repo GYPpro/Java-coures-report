@@ -1,6 +1,6 @@
 package sis2;
-// 测试用例的控制台规则：\
-// 中括号内为需要填入字符串\
+// 测试用例的控制台规则：
+// 中括号内为需要填入字符串
 // 尖括号为可选参数，默认为列表第一个
 
 import java.util.Scanner;
@@ -61,7 +61,8 @@ public class Test {
                     String uid = sc.next();
                     System.out.println(uidm.secSeq(uid));
                 }
-            }
+            } else break;
         }
+        sc.close();
     }
 }
