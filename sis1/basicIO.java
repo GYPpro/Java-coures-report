@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class basicIO {
     public static void main(String[] args) {
-        String initOutputMessage = "Hello world!\nInput a div_arr(差分数组),this program will cacu the row arr.\nfirstly, you should input the length of your arr\n";
+        String initOutputMessage = "Input a div_arr(差分数组),this program will cacu the row arr.\nfirstly, you should input the length of your arr\n";
         System.out.print(initOutputMessage);
         int n;
         Scanner sc = new Scanner(System.in);
