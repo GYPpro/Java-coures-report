@@ -1,13 +1,14 @@
-package sis4;
+package sis7;
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 
-// 第一行包含两个整数n,m，分别表示该数列数字的个数和操作的总个数第二行包含n个用空格分隔的整数，其中第个数字表示数列第项的初始值接下来m行每行包含3或4个整数，表示一个操作，具体如下
-// 1.1xyk:将区间a,y 内每个数加上K。
-// 2.2xy:输出区间 ,y 内每个数的和。
+// 第一行包含两个整数n,m，分别表示该数列数字的个数和操作的总个数
+//第二行包含n个用空格分隔的整数，其中第个数字表示数列第项的初始值
+//接下来m行每行包含3或4个整数，表示一个操作，具体如下
+// 1.1 x y k:将区间a,y 内每个数加上K。
+// 2.2 x y :输出区间 ,x y 内每个数的和。
 
 public class Test {
     public static void main(String[] args) {

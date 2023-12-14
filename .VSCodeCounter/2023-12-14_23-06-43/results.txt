@@ -1,0 +1,74 @@
+Date : 2023-12-14 23:06:43
+Directory : d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report
+Total : 37 files,  2747 codes, 167 comments, 480 blanks, all 3394 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Java     |         35 |      2,567 |        165 |        439 |      3,171 |
+| Typst    |          1 |        179 |          2 |         39 |        220 |
+| Markdown |          1 |          1 |          0 |          2 |          3 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                            | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                               |         37 |      2,747 |        167 |        480 |      3,394 |
+| . (Files)                                                                       |          3 |        236 |          9 |         56 |        301 |
+| rubbish                                                                         |          1 |         73 |          0 |         15 |         88 |
+| sis1                                                                            |          1 |         26 |          0 |          3 |         29 |
+| sis2                                                                            |          2 |        192 |         15 |         22 |        229 |
+| sis3                                                                            |          2 |         63 |          5 |         11 |         79 |
+| sis4                                                                            |          1 |         34 |          0 |          3 |         37 |
+| sis5                                                                            |          5 |        501 |         31 |         81 |        613 |
+| sis6                                                                            |          2 |        124 |          8 |         19 |        151 |
+| sis7                                                                            |          3 |        261 |          1 |         35 |        297 |
+| sis8                                                                            |         10 |        435 |         18 |        120 |        573 |
+| sis9                                                                            |          7 |        802 |         80 |        115 |        997 |
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                        | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\README.md                | Markdown |          1 |          0 |          2 |          3 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\README.typ               | Typst    |        179 |          2 |         39 |        220 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\rubbish\myIO.java        | Java     |         73 |          0 |         15 |         88 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis1\basicIO.java        | Java     |         26 |          0 |          3 |         29 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis2\Test.java           | Java     |         54 |         15 |          3 |         72 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis2\UIDmanager.java     | Java     |        138 |          0 |         19 |        157 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis3\Test.java           | Java     |         26 |          5 |          5 |         36 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis3\TrieTree.java       | Java     |         37 |          0 |          6 |         43 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis4\regularExp.java     | Java     |         34 |          0 |          3 |         37 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis5\SchoolLib.java      | Java     |        186 |         31 |         15 |        232 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis5\Student.java        | Java     |        114 |          0 |         24 |        138 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis5\Test.java           | Java     |         18 |          0 |          3 |         21 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis5\course.java         | Java     |         76 |          0 |         17 |         93 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis5\score.java          | Java     |        107 |          0 |         22 |        129 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis6\Test.java           | Java     |         24 |          5 |          5 |         34 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis6\segTree.java        | Java     |        100 |          3 |         14 |        117 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis7\maxFlow.java        | Java     |         96 |          0 |         13 |        109 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis7\minCost.java        | Java     |        139 |          0 |         19 |        158 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis7\solution.java       | Java     |         26 |          1 |          3 |         30 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis8\Bed.java            | Java     |         13 |          0 |          4 |         17 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis8\City.java           | Java     |         21 |          0 |          7 |         28 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis8\Constants.java      | Java     |         10 |          0 |          4 |         14 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis8\Hospital.java       | Java     |         49 |          0 |         20 |         69 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis8\Main.java           | Java     |         32 |          0 |          6 |         38 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis8\MoveTarget.java     | Java     |         28 |          0 |          9 |         37 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis8\MyPanel.java        | Java     |         78 |          2 |         15 |         95 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis8\Person.java         | Java     |        145 |          6 |         39 |        190 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis8\PersonPool.java     | Java     |         38 |         10 |          9 |         57 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis8\Point.java          | Java     |         21 |          0 |          7 |         28 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis9\Test.java           | Java     |         12 |         34 |          5 |         51 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis9\myLinearEntire.java | Java     |         41 |          0 |         18 |         59 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis9\myLinearLib.java    | Java     |        189 |         34 |         14 |        237 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis9\myLinearSpace.java  | Java     |        111 |          4 |         18 |        133 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis9\myMatrix.java       | Java     |        267 |          4 |         24 |        295 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis9\myPolynomial.java   | Java     |        128 |          4 |         21 |        153 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\sis9\myRealNum.java      | Java     |         54 |          0 |         15 |         69 |
+| d:\Desktop\Document\Coding\JAVA\Rep\Java-coures-report\test.java                | Java     |         56 |          7 |         15 |         78 |
+| Total                                                                           |          |      2,747 |        167 |        480 |      3,394 |
++---------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

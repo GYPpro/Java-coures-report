@@ -5,9 +5,14 @@ import java.util.ArrayList;
 public class myIO {
     private int MAX_INPUT_LENGTH;
 
+    ArrayList<ArrayList<Boolean>> m;
+
     public myIO()
     {
         MAX_INPUT_LENGTH = 114;
+
+        int i = 3,j= 3;
+        m.get(i).set(j,Boolean.valueOf((boolean)m.get(i-1).get(j) || (boolean)m.get(i).get(j-2)));
     }
 
     private boolean isDigit(char c)

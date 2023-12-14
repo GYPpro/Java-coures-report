@@ -69,8 +69,17 @@
 )
 
 #pagebreak()
+= sis3:实现一个trie(字典树)模板
 
-= sis3:学生信息管理器
+#pagebreak()
+
+= sis4:实现一个高性能的基础正则表达式匹配solution类
+
+正则表达式
+
+#pagebreak()
+
+= sis5:学生信息管理器
 
 提供了三个类，其中SchoolLib为主类，提供了对学生以下操作：
 + 添加学生并自动创建学号
@@ -103,7 +112,7 @@ addCur [Course name] [teacher name] [credit]
 celCur [student UID] [Course name] 
 ```]],[选课],
  [#align(left)[```shell-unix-generic
-showStu <sort with:"UID" | "name" | "point">
+showStu <sort with:"UID" | "name" | "GPA">
 ```]],[显示学生列表],
  [#align(left)[```shell-unix-generic
 showCur <sort with:"UID" | "Course name" | " teacher name">
@@ -122,7 +131,7 @@ cacu
 
 #pagebreak()
 
-= sis4:实现一个线段树泛型模板
+= sis6:实现一个线段树泛型模板
 线段树是一种较为复杂的数据结构，旨在快速解决区间数据批量修改与特征统计。\
 本类实现了一个可以批量地对数据进行线性空间内加和运算的线段树，统计内容为区间内的最大值，对于每个操作：
 + 修改单点：时间复杂度为$O(log n)$
@@ -130,19 +139,11 @@ cacu
 + 查询区间：$O(log n)$
 
 #pagebreak()
-= sis5:实现一个trie(字典树)模板
 
-#pagebreak()
-
-= sis6:实现对网络最大流与最小费用流问题的solution类
+= sis7:实现对网络最大流与最小费用流问题的solution类
 
 最大流问题叙述略
 
-#pagebreak()
-
-= sis7:实现一个高性能的基础正则表达式匹配solution类
-
-正则表达式
 
 #pagebreak()
 
@@ -156,8 +157,10 @@ cacu
   table(
     align: left+horizon,
     columns: 3,
-    [myLinearEntire],[线性空间元素],[
-      接口：具有线性性质的基础运算
+    [myLinearLib],[线性计算主类],
+    [myLinearEntire],[线性空间元素],
+    [
+      抽象类：具有线性性质的基础运算
     ],
     [myLinearSpace],[线性空间],[
       + 基础运算
@@ -167,17 +170,19 @@ cacu
     ],
     [myMatrix],[矩阵],[
       + 基础运算
+      + 求秩
       + 行列式
+      + 逆
+      + 转置
       + 对角化
     ],
     [myPolynomial],[多项式],[
       + 基础运算
       + 求值
-      + 牛顿迭代法解特殊解
     ],
     [myRealNum],[实数],[
       + 基础运算
-    ],
+    ]
   )
 )
 
@@ -193,7 +198,7 @@ cacu
     addMat [columns] [rows] [digit(1,1)] ... [digit(c,r)]
     ```],[添加一个列数为columns，行数为rows的矩阵],
     [```shell-unix-generic
-    addPol [rank] [digit 1] ... [digit r]
+    addPol [dim] [digit 1] ... [digit r]
     ```],[添加一个阶数为r的多项式],
     [```shell-unix-generic
     addLS [rank] [LE name 1] ... [LE name r]
@@ -202,14 +207,11 @@ cacu
     show <scope :"all" | "Mat" | "Pol" | "LS">
     ```],[列出对应的所有元素],
     [```shell-unix-generic
-    cacuMat [Mat name] <type :"Det" | "Eig">
-    ```],[计算矩阵的行列式和对角化],
+    cacuMat [Mat name] <type :"Det" | "Rank" | "inverse" | "transpose" | "Eig">
+    ```],[计算矩阵的行列式、秩、逆、转置和对角化],
     [```shell-unix-generic
     cacuPol [Pol name] [digit]
     ```],[计算多项式的值],
-    [```shell-unix-generic
-    solvePol [Pol name] [digit]
-    ```],[求多项式等于输入数字时的一个数值解],
     [```shell-unix-generic
     op [LE name1] <operator :"+" | "-" | "*"> [LE name2]
     ```],[对线性空间元素进行基础运算]

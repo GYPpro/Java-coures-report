@@ -1,4 +1,4 @@
-package sis3;
+package sis5;
 
 public class score {
 

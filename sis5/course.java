@@ -1,4 +1,4 @@
-package sis3;
+package sis5;
 import java.util.Comparator;
 
 public class course {//课程
