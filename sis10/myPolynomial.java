@@ -33,7 +33,8 @@ public class myPolynomial extends myLinearEntire{
     public String toString(){
         String str = "";
         for(int i = 0; i < this.dim; i++){
-            str += this.coordinate.get(i).toString() + "\n";
+            str += this.coordinate.get(i).toString() + "·x^ " + i;
+            if(i != this.dim -1) str += "+ ";
         }
         return str;
     }

@@ -1,0 +1,17 @@
+addMat 2 2 1 2 3 4
+addMat 2 2 1 0 0 1
+addMat 2 3 1 1 2 3 4 5 6
+addMat 2 3 1 0 0 0 1 2 3
+addPol 2 1 2
+addPol 2 1 0
+addLS 2 e f
+show all
+op e * f
+op a + b
+op a * b
+op c * d
+cacuMat a Rank
+cacuMat b inverse
+cacuMat c Det
+cacuPol e 2
+cacuPol g 10
