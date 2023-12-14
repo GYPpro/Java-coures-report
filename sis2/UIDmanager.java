@@ -57,6 +57,23 @@ public class UIDmanager {
         return rt;
     }
     
+    public String nextDate()
+    {
+        Date date = new Date();
+        SimpleDateFormat sf = new SimpleDateFormat("yyMMdd");
+        String s = sf.format(date);
+        nextDataNum++;
+        Integer tmp = nextDataNum;
+        StringBuffer sb = new StringBuffer();
+        for(int i = 0;i < DATENUM_LENGTH;i ++)
+        {
+            sb.append(tmp % 10);
+            tmp /= 10;
+        }
+        String rt = s + sb.reverse().toString();
+        return rt;
+    }
+
     public String nextCode(Object c)
     {
         StringBuffer rt = new StringBuffer();
@@ -69,6 +86,20 @@ public class UIDmanager {
             if(k != 3)rt.append('-');
         }
         codeHM.put(rt.toString(), c);
+        return rt.toString();
+    }
+
+    public String nextCode()
+    {
+        StringBuffer rt = new StringBuffer();
+        for(int k = 0;k < 4;k ++)
+        {
+            for(int i = 0;i < CODE_LENGTH;i ++)
+            {
+                rt.append(getRandChar());
+            }
+            if(k != 3)rt.append('-');
+        }
         return rt.toString();
     }
 
@@ -86,19 +117,40 @@ public class UIDmanager {
         return rt.toString();
     }
 
-    public Object secDate(String uid)
+    public String nextSeq()
+    {
+        StringBuffer rt = new StringBuffer();
+        nextSeq ++;
+        Integer tmp = nextSeq;
+        for(int i = 0;i < SEQ_LENGTH;i ++)
+        {
+            rt.append(tmp % 10);
+            tmp /= 10;
+        }
+        return rt.reverse().toString();
+    }
+
+    public Object secDate(String uid) throws Exception
     {
         return dateHM.get(uid);
     }
 
-    public Object secCode(String uid)
+    public Object secCode(String uid) throws Exception
     {
         return codeHM.get(uid);
     }
 
-    public Object secSeq(String uid)
+    public Object secSeq(String uid) throws Exception
     {
         return seqHM.get(uid);
+    }
+
+    public void bindUID(String uid,Object c) throws Exception
+    {
+        if(uid.length() == 4 + DATENUM_LENGTH) dateHM.put(uid, c);
+        else if(uid.length() == 4 + CODE_LENGTH * 4) codeHM.put(uid, c);
+        else if(uid.length() == SEQ_LENGTH) seqHM.put(uid, c);
+        else throw new Exception("UID格式错误\n");
     }
 
 }

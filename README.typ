@@ -76,8 +76,8 @@
 + 添加学生并自动创建学号
 + 添加课程并自动生成课程编号
 + 学生选课
-+ 记录考试成绩，补考成绩，平时分
-+ 计算总评成绩
++ 记录考试成绩，补考成绩
++ 与平时分加权，计算总评成绩
 + 计算绩点
 + 以绩点、学号、姓名字典序等对学生排序
 保证所有操作线程安全，必要的地方法进行了异常处理与保护性拷贝。
@@ -108,6 +108,12 @@ showStu <sort with:"UID" | "name" | "point">
  [#align(left)[```shell-unix-generic
 showCur <sort with:"UID" | "Course name" | " teacher name">
 ```]],[显示课程列表],
+  [#align(left)[```shell-unix-generic
+addScore [student UID] [Course name] [Normally score] [Exam score]
+```]],[添加成绩],
+  [#align(left)[```shell-unix-generic
+addResc [student UID] [Course name] [Exam score] 
+  ```]],[添加补考成绩],
  [#align(left)[```shell-unix-generic
 cacu
 ```]],[计算总评成绩与绩点]
