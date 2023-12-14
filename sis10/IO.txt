@@ -15,3 +15,73 @@ cacuMat b inverse
 cacuMat c Det
 cacuPol e 2
 cacuPol g 10
+
+addMat 2 2 1 2 3 4
+addMat 2 2 1 0 0 1
+成功添加矩阵：a
+成功添加矩阵：b
+addMat 2 3 1 1 2 3 4 5 6
+addMat 2 3 1 0 0 0 1 2 3
+成功添加矩阵：c
+成功添加矩阵：d
+addPol 2 1 2
+addPol 2 1 0
+addLS 2 e f
+show all
+op e * f
+成功添加多项式：e
+成功添加多项式：f
+h
+Mats
+a : 1.0 2.0
+3.0 4.0
+b : 1.0 0.0
+0.0 1.0
+c : 1.0 1.0
+2.0 3.0
+4.0 5.0
+d : 1.0 0.0
+0.0 0.0
+1.0 2.0
+Pols
+e : 1.0·x^ 0+ 2.0·x^ 1
+f : 1.0·x^ 0+ 0.0·x^ 1
+LSs
+g : 1.0·x^ 0+ 2.0·x^ 1
+1.0·x^ 0+ 0.0·x^ 1
+
+
+h:
+1.0·x^ 0+ 2.0·x^ 1+ 0.0·x^ 2
+op a + b
+op a * b
+op c * d
+cacuMat a Rank
+cacuMat b inverse
+cacuMat c Det
+cacuPol e 2
+cacuPol g 10
+i:
+2.0 2.0
+3.0 5.0
+j:
+1.0 2.0
+3.0 4.0
+java.lang.IllegalArgumentException: 行列不匹配的矩阵不能相乘。
+        at sis10.myMatrix.multiply(myMatrix.java:100)
+        at sis10.myMatrix.multiply(myMatrix.java:1)
+        at sis10.myLinearLib.parseCommand(myLinearLib.java:236)
+        at sis10.Test.main(Test.java:14)
+0
+java.lang.Exception: 行列式为0，无法求逆。
+        at sis10.myMatrix.inverse(myMatrix.java:239)
+        at sis10.myLinearLib.parseCommand(myLinearLib.java:201)
+        at sis10.Test.main(Test.java:14)
+java.lang.Exception: 非方阵无法求行列式。
+        at sis10.myMatrix.det(myMatrix.java:182)
+        at sis10.myLinearLib.parseCommand(myLinearLib.java:193)
+        at sis10.Test.main(Test.java:14)
+3.0
+java.lang.Exception: 目标不是多项式。
+        at sis10.myLinearLib.parseCommand(myLinearLib.java:215)
+        at sis10.Test.main(Test.java:14)
