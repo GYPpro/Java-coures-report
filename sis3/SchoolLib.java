@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import sis2.UIDmanager;
-import sis3.Student; // Add the missing import statement
 
 
 // 测试用例的控制台规则：\
